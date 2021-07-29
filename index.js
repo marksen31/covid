@@ -1,13 +1,23 @@
 async function getData() {
-  let res = await fetch(
-    "https://covid-api.mmediagroup.fr/v1/cases?country=India");
-  let data = await res.json();
-  data = JSON.parse(data)
-  data.forEach((element) => {
-      console.log(element)
-  });
-//   foo(data)
-  console.log(data);
+  
+    let res = await fetch(
+        "https://corona.lmao.ninja/v3/covid-19/countries");
+      let data = await res.json();
+      data = JSON.parse(JSON.stringify(data))
+      for (var key in data) {
+        console.log(key, data[key]);
+     }
+    // //   console.log(data)
+    //   for (let i = 0; i < data.length; i++) {
+    //     if (!data) console.log( {});
+    //     if (typeof data === 'object') console.log(data);;
+    //     if (typeof data === 'string') console.log( JSON.parse(data));
+    //       const element = data[i];
+    //       console.log(element)
+    //   }
+    // //   foo(data)
+    
+  
 
   
 }
